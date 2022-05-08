@@ -1,0 +1,108 @@
+.background{
+    background:url("https://images.unsplash.com/photo-1432847712612-926caafaa802?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80");
+    background-size: cover;
+    /* background-repeat: no-repeat; */
+    width: 100%;
+    height: 2000px;
+    margin: 0px;
+}
+
+.box{
+    display: flex;
+    font-family: 'Kanit';
+}
+.box1Background{
+    background: url("https://media.istockphoto.com/videos/black-woman-browsing-internet-for-tv-movies-on-tablet-video-id1224564508?s=640x640");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0px;
+}
+.box1{
+    width: 100%;
+    background-color: black;
+    opacity: 70%;
+    z-index: 90;
+}
+.box1Content{
+    color: white;
+    z-index: 100;
+    padding: 10px;
+}
+.box2{
+    background-color: rgb(55, 64, 73);
+    color: white;
+}
+
+@media (min-width:500px) and (max-width:800px) {
+    .box{
+        flex-direction: column;
+        width: 99%;
+        margin-left: 5%;
+        height: 350px;
+    }
+    .box1Background{
+        width:90%
+    }
+    .box2{
+        width: 90%;
+    }
+    .box1{
+        height: 150px;
+    }
+}
+@media (min-width:801px) {
+    .box{
+        flex-direction: row;
+        width: 85%;
+        margin-left: 8%;
+        height: 550px;
+    }
+    .box1Background{
+        width:50%
+    }
+    .box2{
+        width: 50%;
+    }
+    .box1{
+        height: 550px;
+    }
+}
+.input{
+    margin: 3%;
+    width: 90%;
+    height: 35px;
+    border: none;
+    border-bottom: 3px solid rgb(144, 190, 234);
+    background-color: whitesmoke;
+    font-family: 'Kanit';
+}
+.input:focus{
+    border-bottom: 4px solid rgb(31, 63, 70);
+    outline:none;
+    background-color: lightgray;
+    color: rgb(14, 41, 95);
+}
+.button{
+    border: none;
+    outline: none;
+    height: 40px;
+    border-radius: 10px;
+    margin: 3%;
+    width: 90%;
+    background-color: rgb(36, 71, 78);
+    color:white;
+    font-family: 'Kanit';
+    font-weight: bold;
+}
+.center{
+    text-align: center;
+}
+.error{
+    color: rgb(223, 96, 96);
+    margin-left:4% ;
+    margin-right:4% ;
+    text-align: center;
+    /* border: 1px solid red; */
+    word-wrap: break-word;
+    /* border-radius: 5px; */
+}

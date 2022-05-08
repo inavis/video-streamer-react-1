@@ -1,0 +1,45 @@
+.appbar{
+    height: 35px;
+    width:100%;
+    background-color: rgb(55, 64, 73);
+}
+.button1{
+    outline: none;
+    border:none;
+    background-color: rgb(55, 64, 73);
+    color:white; 
+    padding:7px;
+    font-family: 'Nunito Sans';
+    font-weight: bold;
+    font-size: x-large;
+}
+.button2{
+    outline: none;
+    border:none;
+    background-color: rgb(142, 136, 136);
+    border-radius: 10px;
+    color:white;
+    font-size: large;   
+    padding:3px;
+    float: right;
+    margin: 5px;
+    font-family: 'Nunito Sans';
+}
+.button1:hover{
+    cursor: pointer;
+    color: rgb(170, 186, 218);
+}
+.button2:hover{
+    cursor: pointer;
+    background-color: rgb(170, 186, 218);
+}
+
+.iconButton{
+    outline: none;
+    border:none;
+    background-color: white;
+    border-radius: 100px;
+    color: gray;
+    /* padding: 5px;
+    margin: 5px; */
+}
