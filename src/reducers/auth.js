@@ -4,7 +4,8 @@ import {
     REGISTER_FAIL,
     LOGIN_SUCCESS,
     LOGIN_FAIL,
-    LOGOUT,
+    LOGOUT_SUCCESS,
+    LOGOUT_FAIL
   } from "../actions/types";
 
   const user = Cookies.get(`logintoken`);
@@ -38,12 +39,16 @@ import {
           isLoggedIn: false,
           user: null,
         };
-      case LOGOUT:
+      case LOGOUT_SUCCESS:
         return {
           ...state,
           isLoggedIn: false,
           user: null,
         };
+        case LOGOUT_FAIL:
+          return {
+            ...state
+          };
       default:
         return state;
     }

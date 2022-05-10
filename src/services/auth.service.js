@@ -11,7 +11,7 @@ const register = (values) => {
       .then((response) => {
         if (response.data.user.token) {
          // localStorage.setItem("user", JSON.stringify(response.data));
-         Cookies.set(`logintoken`, response.data.user.token);
+         Cookies.set(`logintoken`, response.data.user.token,{expires:1});
          console.log("Cookies",Cookies.get(`logintoken`))
         }
         return response.data.user;
@@ -19,7 +19,14 @@ const register = (values) => {
   };
   const logout = () => {
    // localStorage.removeItem("user");
-   Cookies.remove(`logintoken`);
+
+   return axios
+   .get(`${API}user/logout`, {headers:{"x-auth-token":Cookies.get(`logintoken`)}})
+   .then((response) => {
+     console.log(response)
+    Cookies.remove(`logintoken`);
+   });
+  
   };
   export default {
     register,

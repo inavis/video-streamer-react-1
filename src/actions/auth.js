@@ -3,7 +3,8 @@ import {
     REGISTER_FAIL,
     LOGIN_SUCCESS,
     LOGIN_FAIL,
-    LOGOUT,
+    LOGOUT_SUCCESS,
+    LOGOUT_FAIL
   } from "./types";
   import AuthService from "../services/auth.service";
 
@@ -41,8 +42,18 @@ import {
     );
   };
   export const logout = () => (dispatch) => {
-    AuthService.logout();
-    dispatch({
-      type: LOGOUT,
-    });
+    return AuthService.logout().then(
+      (response) => {
+        dispatch({
+          type: LOGOUT_SUCCESS,
+        });
+        return Promise.resolve();
+      },
+      (error) => {
+        dispatch({
+          type: LOGOUT_FAIL,
+        });
+        return Promise.reject();
+      }
+    );
   };
